@@ -76,58 +76,48 @@
         }
         
         .lang-switch {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
             display: flex;
-            gap: 10px;
-            z-index: 1000;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
         }
         
         .lang-btn {
-            padding: 10px 20px;
+            padding: 10px 25px;
             border: none;
             border-radius: 25px;
             cursor: pointer;
             font-size: 14px;
             font-weight: 500;
             transition: all 0.3s ease;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.15);
-        }
-        
-        .lang-btn.zh {
-            background-color: #007AFF;
-            color: white;
-        }
-        
-        .lang-btn.en {
-            background-color: #34C759;
+            background-color: #333;
             color: white;
         }
         
         .lang-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            opacity: 0.8;
         }
         
         .lang-btn.active {
-            opacity: 1;
+            background-color: #007AFF;
         }
         
         .lang-btn.inactive {
-            opacity: 0.5;
+            background-color: #333;
         }
         
-        [lang="en"] {
+        .container > [lang="en"] {
             display: none;
         }
         
-        html[lang="en"] [lang="zh-CN"] {
-            display: none;
+        html[lang="en"] .container > [lang="zh-CN"] {
+            display: none !important;
         }
         
-        html[lang="en"] [lang="en"] {
-            display: block;
+        html[lang="en"] .container > [lang="en"] {
+            display: block !important;
         }
     </style>
 </head>
